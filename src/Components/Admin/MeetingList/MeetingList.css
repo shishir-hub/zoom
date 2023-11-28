@@ -1,0 +1,24 @@
+.meeting{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.meeting table,
+.meeting th,
+.meeting td{
+    border: 1px solid #9a9a9a;
+    border-collapse: collapse;
+}
+
+.meeting th,
+.meeting td{
+    padding: 5px 10px;
+}
+
+.meeting table tr.linked{
+    cursor: pointer;
+}

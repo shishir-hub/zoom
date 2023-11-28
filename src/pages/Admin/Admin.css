@@ -1,0 +1,66 @@
+.admin{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 32px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.admin_container{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.admin_container .heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.admin_container .heading p{
+    color: rgb(195, 59, 59);
+}
+
+.admin_container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.admin_container form .inputs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.admin_container form button{
+    padding: 10px 12px;
+    border: 2px solid #7d7b7b;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+.admin_container .addMeeting{
+    padding: 10px 12px;
+    border: 2px solid #7d7b7b;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+}

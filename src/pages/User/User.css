@@ -1,0 +1,26 @@
+.user{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 32px;
+}
+
+.user .container{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.user .container .heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

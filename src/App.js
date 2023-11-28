@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home/Home';
+import ZoomMSDK from './pages/ZoomMSDK/ZoomMSDK';
+import Admin from './pages/Admin/Admin';
+import User from './pages/User/User';
+import { useState } from 'react';
 
 function App() {
+  const [user, setUser] = useState({
+    userName: "user",
+    userEmail: "user@email.com",
+    role: 0,
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path='/msdk' element={<ZoomMSDK user={user} />} />
+        <Route exact path="/admin" element={<Admin user={user} setUser={setUser} />} />
+        <Route exact path="/user" element={<User />} />
+      </Routes>
+    </>
   );
 }
 

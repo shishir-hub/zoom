@@ -1,0 +1,34 @@
+.home{
+    width: 100%;
+    padding: 50px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_container{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.home_container .links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.home_container .links a{
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #6e6969;
+}

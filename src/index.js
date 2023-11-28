@@ -2,16 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { ZoomMtg } from '@zoomus/websdk'
+
+
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareWebSDK();
+
+ZoomMtg.i18n.load('en-US')
+ZoomMtg.i18n.reload('en-US')
+
+ZoomMtg.setZoomJSLib("https://source.zoom.us/2.17.0/lib", "/av");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
