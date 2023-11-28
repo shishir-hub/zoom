@@ -15,7 +15,7 @@ const ZoomMSDK = ({ user }) => {
     const {
         REACT_APP_ZOOM_MSDK_KEY = "",
         REACT_APP_MSDK_SIGNATURE_ENDPOINT = "",
-        LEAVE_URL = "http://localhost:3000/",
+        LEAVE_URL = "https://zoom-lilac.vercel.app/",
     } = process.env;
 
     const queryParams = new URLSearchParams(window.location.search);

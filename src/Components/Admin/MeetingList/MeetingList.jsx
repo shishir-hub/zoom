@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./MeetingList.css";
 import { useNavigate } from "react-router-dom";
 
-function MeetingList({ user }) {
+function MeetingList({ user, reload }) {
   const [meetList, setMeetList] = useState();
   const [connectingMeeting, setConnectingMeeting] = useState(false);
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ function MeetingList({ user }) {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [reload]);
 
   const handleJoinMeeting = (id) => {
     console.log(id);

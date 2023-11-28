@@ -5,7 +5,8 @@
     align-items: center;
     padding: 50px 32px;
     position: relative;
-    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
 .admin_container{

@@ -6,6 +6,7 @@ import CreateMeeting from "../../Components/Admin/CreateMeeting/CreateMeeting";
 function Admin({ user, setUser }) {
   const [showError, setShowError] = useState(false);
   const [createMeeting, setCreateMeeting] = useState(false);
+  const [reload, setReload] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,7 +30,11 @@ function Admin({ user, setUser }) {
   return (
     <div className="admin">
       {createMeeting ? (
-        <CreateMeeting setCreateMeeting={setCreateMeeting} />
+        <CreateMeeting
+          setCreateMeeting={setCreateMeeting}
+          setReload={setReload}
+          reload={reload}
+        />
       ) : (
         <></>
       )}
@@ -61,7 +66,7 @@ function Admin({ user, setUser }) {
         ) : (
           <>
             <h1>Admin DashBoard</h1>
-            <MeetingList user={user} />
+            <MeetingList user={user} reload={reload} />
             <button
               onClick={() => {
                 setCreateMeeting(!createMeeting);

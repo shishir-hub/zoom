@@ -3,7 +3,7 @@ import "./CreateMeeting.css";
 import { RiLoader4Fill } from "react-icons/ri";
 import axios from "axios";
 
-function CreateMeeting({ setCreateMeeting }) {
+function CreateMeeting({ setCreateMeeting, setReload, reload }) {
   const [loading, setLoading] = useState(false);
 
   const handleFormSubmit = (e) => {
@@ -24,13 +24,13 @@ function CreateMeeting({ setCreateMeeting }) {
       .then((res) => {
         console.log(res);
         setLoading(false);
+        setCreateMeeting(false);
+        setReload(!reload);
       })
       .catch((err) => {
         console.log(err);
         setLoading(false);
       });
-
-    setLoading(false);
   };
 
   return (
